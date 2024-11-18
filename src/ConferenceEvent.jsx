@@ -99,8 +99,10 @@ const ConferenceEvent = () => {
                                 <td>${item.cost}</td>
                                 <td>
                                     {item.type === "meals" || item.numberOfPeople
-                                    ? ' For ${numberOfPeople} people'
-                                    : item.quantity}
+                                    ? ` For ${numberOfPeople} people` 
+                                    //for some reason this part of the code requires backwards apostrophes (backticks)
+                                    //I can't find other examples, but when regular apostrophes are used, it doesn't render the variable and instead outputs the string of characters
+                                    : item.quantity} 
                                 </td>
                             </tr>
                         ))}
